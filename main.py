@@ -1,6 +1,10 @@
-from src.extract import fetch_all_weather
-from src.extract import save_raw_data
+from src.extract import fetch_all_weather, save_raw_data
+from src.validate import validate_weather_data
+from src.transform import transform_weather_data
+from src.load import save_parquet
 
 weather = fetch_all_weather()
-
-save_raw_data(weather)
+valid_weather = validate_weather_data(weather)
+save_raw_data(valid_weather)
+df = transform_weather_data(valid_weather)
+save_parquet(df)
