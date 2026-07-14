@@ -36,7 +36,7 @@ def upload_to_s3(file_path, bucket_name):
     s3.upload_file(
         file_path,
         bucket_name,
-        file_name
+        f"processed/{file_name}"
     )
 
     logger.info(f"Uploaded {file_name} to {bucket_name}")

@@ -1,1 +1,14 @@
+venv/
 .env
+__pycache__/
+*.pyc
+
+data/raw/*
+data/processed/*
+
+logs/
+
+.vscode/
+
+*.csv
+*.parquet
