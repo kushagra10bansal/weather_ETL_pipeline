@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
-
 BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 RAW_DATA_FOLDER = "data/raw"
-
 PROCESSED_DATA_FOLDER = "data/processed"
+
+AWS_REGION = os.getenv("AWS_REGION", "ap-south-1")
